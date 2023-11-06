@@ -1,0 +1,21 @@
+r1=SPACE(100)
+r2=SPACE(100)
+r1=TRIM(thisform.txtorig.value)			&& Directorio Origen
+r2=TRIM(thisform.txtdest.value)+TRIM(thisform.txtnoar.Value)+".ZIP"
+
+************************************
+* COMPRIMIR
+************************************
+*cNuevoZip = "e:\Miarchivo\"+"MiArchivo.Zip"				&& Unidad y Nombre del Archivo a Generar	
+*cOrigen = "e:\HOWARD\PRUEBAS"				&& Direcrorio a Comprimir y/o Grabar
+cNuevoZip = r2								&& Unidad y Nombre del Archivo a Generar	
+cOrigen   = r1								&& Direcrorio a Comprimir y/o Grabar
+Strtofile(Chr(0x50)+Chr(0x4B)+Chr(0x05)+Chr(0x06)+Replicate(Chr(0),18),cNuevoZip) 
+oShell = Createobject("Shell.Application")
+For Each oArchi In oShell.NameSpace(cOrigen).Items
+	oShell.NameSpace(cNuevoZip).CopyHere(oArchi)
+Endfor
+
+
+
+MESSAGEBOX("La Copia Fue Realizada !",0+64,"Copias de Seguridad")
