@@ -1,11 +1,9 @@
 <?php
-
 if (!(ISSET($_SESSION))) {
     session_start();
 }
 require_once("clases/clsUsuarios.php");
 require_once("conexion.php");
-
 $_SESSION["dia_actual"] = $hoy;
 $_SESSION["titulo"] = $_titulo;
 $_SESSION["sesion_id_usuario"] = 0;
