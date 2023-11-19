@@ -10,7 +10,7 @@ $(document).ready(function () {
         height: 360,
         width: 600,
         modal: true,
-        buttons: {"Insertar": insertarRemite, "Cancelar": cancelar}
+        buttons: {"Insertar": insertarRemite, "Cancela": cancelar}
     })
     
      $("#asignaRadicado").dialog({
@@ -18,7 +18,7 @@ $(document).ready(function () {
         height: 420,
         width: 400,
         modal: true,
-        buttons: {"Asignar Radicado": asignarRadicado, "Cancelar": cancelar}
+        buttons: {"Asignar Radicado": asignarRadicado, "Cancela": cancelar}
     })
     
      $("#cierraRadicado").dialog({
@@ -26,7 +26,7 @@ $(document).ready(function () {
         height: 260,
         width: 400,
         modal: true,
-        buttons: {"Cerrar Radicado": cerrarRadicado, "Cancelar": cancelar}
+        buttons: {"Cerrar Radicado": cerrarRadicado, "Cancela": cancelar}
     })
     
 })
@@ -69,10 +69,10 @@ function exporta(fecIni, fecFin) {
         url: 'php/exporta.php',
         type: 'post',
         beforeSend: function () {
-            $("#resExp").html("Procesando, espere por favor...");
+            $("#resExp").html("Procesando, espere un momento por favor...");
         },
         success: function (response) {
-            $("#resExp").html("Archivo Exportado.");
+            $("#resExp").html("Archivo Exportado Correctamente.");
         }
     });
 
