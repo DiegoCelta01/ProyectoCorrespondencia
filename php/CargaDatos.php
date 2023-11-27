@@ -1,5 +1,4 @@
 <?php
-
 require_once("../clases/clsConsultas.php");
 require_once("../conexion.php");
 if (!(ISSET($_SESSION))) {

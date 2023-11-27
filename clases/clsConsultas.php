@@ -1,5 +1,4 @@
 <?php
-
 class clsConsultas {
 
     public function ListaDependencia($db) {
@@ -136,7 +135,7 @@ class clsConsultas {
                 $message = "El folder destino no tiene permisos de escritura.";
                 break;
             case UPLOAD_ERR_EXTENSION:
-                $message = "El formato de archivo no es valido.";
+                $message = "El formato de archivo no es valido, intente nuevamente.";
                 break;
 
             default:
