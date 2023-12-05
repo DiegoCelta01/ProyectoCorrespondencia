@@ -22,7 +22,7 @@ if ((isset($_POST['accion'])) and ( $_POST['accion'] == 'Ingresar')) {
         $_SESSION["sesion_dependencia"] = $usuario->getDependencia();
         $_SESSION["sesion_nomdependencia"] = $usuario->getnomDependencia();
     } else {
-        echo '<script language="javascript">alert("Usuario o Clave son incorrectos, por favor intente comincarse con el arera de soporte.");</script>';
+        echo '<script language="javascript">alert("Usuario o Clave son incorrectos, por favor intente comunicarse con el area de soporte.");</script>';
     }
 }
 if ($_SESSION["sesion_id_usuario"] > 0) {
